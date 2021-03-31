@@ -1,0 +1,18 @@
+<ng-container *ngIf="questionData.items; else noQuestionsAvailable">
+
+    <div class="title">
+        <h1>Following Results are available</h1>
+    </div>
+    <div class="question" *ngFor="let question of questionData.items; let i=index">
+        <h3>{{((currentPageIndex-1)*10) + i+1 + '. ' }}{{question.title}}</h3>
+    </div>
+    <div class="central">
+        <a class="anc" *ngIf="currentPageIndex!==1" (click)="goBack()">Prev</a>
+        <a class="anc"  *ngFor="let i of paginationArray" [class.underline]="i===currentPageIndex" (click)="pageChange(i)">{{i}}</a>
+        <a class="anc"(click)="goNext()">Next</a>
+    </div>
+<a routerLink="../search">Return to Advanced Search</a>
+</ng-container>
+<ng-template #noQuestionsAvailable>
+    <h1>No results available...</h1>
+</ng-template>

@@ -1,0 +1,140 @@
+<div class="title">
+   <h1>Advanced Search Questions for Stackoverflow</h1>
+</div>
+<div class="grid-container" [formGroup]="searchForm">
+    <div class="grid-item">
+        <label for="fromdate">From Date: </label>
+        <input type="date" name="fromdate" formControlName="fromdate">
+    </div>
+    <div class="grid-item">
+        <label for="todate">To Date: </label>
+        <input type="date" name="todate" formControlName="todate">
+    </div>
+    <div class="grid-item">
+        <label for="order">Order: </label>
+        <select name="order" formControlName="order">
+            <option value="asc">Ascending</option>
+            <option value="desc">Descending</option>
+
+        </select>
+    </div>
+    <div class="grid-item">
+        <label for="mindate">Minimum Date: </label>
+        <input type="date" name="mindate" formControlName="min">
+    </div>
+    <div class="grid-item">
+        <label for="maxdate">Maximum Date: </label>
+        <input type="date" name="maxdate" formControlName="max">
+    </div>
+    <div class="grid-item">
+        <label for="sort">Sort: </label>
+        <select name="sort" formControlName="sort">
+            <option value="activity">Activity</option>
+            <option value="votes">Votes</option>
+            <option value="creation">Creation</option>
+            <option value="relevance">Relevance</option>
+
+        </select>
+    </div>
+    <div class="grid-item">
+        <label for="q">Question Parameters: </label>
+        <input type="text" name="q" formControlName="q">
+    </div>
+    <div class="grid-item">
+        <label for="accepted">Accepted: </label>
+        <select name="accepted" formControlName="accepted">
+            <option value="true">True</option>
+            <option value="false">False</option>
+
+
+        </select>
+    </div>
+    <div class="grid-item">
+        <label for="answers">How many accepted answers?: </label>
+        <input type="text" name="answers" formControlName="answers">
+    </div>
+    <div class="grid-item">
+        <label for="body">Body: </label>
+        <input type="text" name="body" formControlName="body">
+    </div>
+    <div class="grid-item">
+        <label for="closed">Closed: </label>
+        <select name="closed" formControlName="closed">
+            <option value="true">True</option>
+            <option value="false">False</option>
+
+
+        </select>
+    </div>
+    <div class="grid-item">
+        <label for="migrated">Migrated: </label>
+        <select name="migrated" formControlName="migrated">
+            <option value="true">True</option>
+            <option value="false">False</option>
+
+
+        </select>
+    </div>
+    <div class="grid-item">
+        <label for="notice">Notice: </label>
+        <select name="notice" formControlName="notice">
+            <option value="true">True</option>
+            <option value="false">False</option>
+
+
+        </select>
+    </div>
+    <div class="grid-item">
+        <label for="nottagged">Not tagged: </label>
+        <input type="text" name="nottagged" formControlName="nottagged">
+    </div>
+    <div class="grid-item">
+        <label for="tagged">Tagged: </label>
+        <input type="text" name="tagged" formControlName="tagged">
+    </div>
+    <div class="grid-item">
+        <label for="title">Title: </label>
+        <input type="text" name="title" formControlName="title">
+    </div>
+    <div class="grid-item">
+        <label for="user">User: </label>
+        <input type="text" name="user" formControlName="user">
+    </div>
+    <div class="grid-item">
+        <label for="url">URL: </label>
+        <input type="text" name="url" formControlName="url">
+    </div>
+    <div class="grid-item">
+        <label for="views">Views: </label>
+        <input type="text" name="views" formControlName="views">
+    </div>
+    <div class="grid-item">
+        <label for="wiki">Wiki: </label>
+        <select name="wiki" formControlName="wiki">
+            <option value="true">True</option>
+            <option value="false">False</option>
+
+
+        </select>
+    </div>
+    <div class="grid-item">
+        
+        <button (click)="onSearch()">Search</button>
+    </div>
+</div>
+<!-- <div>
+    q - a free form text parameter, will match all question properties based on an undocumented algorithm.
+accepted - true to return only questions with accepted answers, false to return only those without. Omit to elide constraint.
+answers - the minimum number of answers returned questions must have.
+body - text which must appear in returned questions' bodies.
+closed - true to return only closed questions, false to return only open ones. Omit to elide constraint.
+migrated - true to return only questions migrated away from a site, false to return only those not. Omit to elide constraint.
+notice - true to return only questions with post notices, false to return only those without. Omit to elide constraint.
+nottagged - a semicolon delimited list of tags, none of which will be present on returned questions.
+tagged - a semicolon delimited list of tags, of which at least one will be present on all returned questions.
+title - text which must appear in returned questions' titles.
+user - the id of the user who must own the questions returned.
+url - a url which must be contained in a post, may include a wildcard.
+views - the minimum number of views returned questions must have.
+wiki - true to return only community wiki questions, false to return only non-community wiki ones. Omit to elide constraint.
+</div> -->
